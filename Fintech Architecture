@@ -1,1 +1,13 @@
+When we are purchasing we always go through a payment organisation,that we call it as B2B Fintech.
+Eg:Master card ,Paytm etc
+Let us take oneorganisation,that is Master card whose gonna do help various bussiness for different payments.We call it Fintech architecture as microservice architecture inwhich your single product is divided into different layers.
+FRONTEND ,BFF,APPLICATION and DATA layer.
+Frontend layer :Through this layer,users do the the payment is going to communicate to the product in Fintech.
+Application layer:This is the core bussiness layer,bussiness her is the financial transaaction.This layer will have the services ,which do the core transaction and manage related to that.
+Data layer:This is the actual layer where your data is stored.All the transaction or all the data about user will be stored.
+Frontend layer you can consider it as 2 micro services or 2 parts of it.
+1)Checkout service 2)Merchant UI
+Through Checkout Ui ,users will do the payment trouh UPI or credit cards etc.
+Merchant UI is for bussiness owners,this helps to track their total orders,payment details etc.
+Application layer divided into 4 service:
 
