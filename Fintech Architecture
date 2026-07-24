@@ -1,13 +1,34 @@
 When we are purchasing we always go through a payment organisation,that we call it as B2B Fintech.
 Eg:Master card ,Paytm etc
-Let us take oneorganisation,that is Master card whose gonna do help various bussiness for different payments.We call it Fintech architecture as microservice architecture inwhich your single product is divided into different layers.
+Let us take one organisation,that is Master card whose gonna do help various bussiness for different payments.We call it Fintech architecture as microservice architecture inwhich your single product is divided into different layers.
 FRONTEND ,BFF,APPLICATION and DATA layer.
 Frontend layer :Through this layer,users do the the payment is going to communicate to the product in Fintech.
 Application layer:This is the core bussiness layer,bussiness her is the financial transaaction.This layer will have the services ,which do the core transaction and manage related to that.
 Data layer:This is the actual layer where your data is stored.All the transaction or all the data about user will be stored.
+
 Frontend layer you can consider it as 2 micro services or 2 parts of it.
 1)Checkout service 2)Merchant UI
 Through Checkout Ui ,users will do the payment trouh UPI or credit cards etc.
 Merchant UI is for bussiness owners,this helps to track their total orders,payment details etc.
-Application layer divided into 4 service:
 
+Application layer divided into 4 service:
+1.Ledger service 2.Payment service 3.Fraud service 4.Notification service
+*Ledger service: Ledger is the account service which helps to keep the account details of user.It will keep client accounts.
+*Payment service:It is the actual microservice which will connect to the bank or the payment gateway and do the transaction whichever you are processing.
+*Fraud service:To track fraud transaction,organisation started devoloping an modern machine learning microservicecalled as fraud.For Fintech fraud is the machine learning microservice that is where they need more intelligenceto find out whether the transactions are fraudulent or not.
+*Notification service:Sending the notifications of what transaction that's been happening and what is the status of it to the user.
+
+Data Layer:
+It have different databases.We will have SQl database and NOSQL database.So SQL MEans there is a structure,NoSQl means no structure of the data.Apart from that we will also have something called graphical database for your machine learning.
+
+BFF Layer:
+BFF layer is called as Backend for Frontend.BFF layer introduced recently.In traditional we have only Frontend and Application layer.
+BFF Layer does 2 things,helps the frontend to see the content properly,because application layer has so many different services and different data.
+->Purpose 1:
+BFF collect the messi data and give a proper data so that the user can see it or view it.
+->Purpose 2:
+All the microservice will not communicate to each other.If transactioning is happening,you are checking on the checkout UI ,it will pass to the BFF and what bff will d0 is ,BFf will directly communicating only to the payment service.
+
+
+
+hgg
